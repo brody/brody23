@@ -4,6 +4,6 @@
 
 *Personal website powered by [Astro](https://astro.build/), [Tailwind](https://tailwindcss.com/), [Netlify](https://www.netlify.com/) & 💖.*
 
-![brody.com](/preview.png "https://brody.com")
+![brody.com](/public/preview.png "https://brody.com")
 
 [Visit my website](https://brody.com)
