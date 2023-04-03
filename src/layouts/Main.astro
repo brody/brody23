@@ -1,0 +1,29 @@
+---
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import { Icon } from 'astro-icon';
+
+export interface Props {
+  title: string;
+  pageDesc?: string;
+}
+
+const { title, pageDesc } = Astro.props;
+---
+
+<div class='breadcrumbs not-prose mb-14'>
+  <a href='/'>
+    <span class='font-heading h-lig mr-1.5 -mt-0.5'>:-)</span>Brody.com
+  </a>
+  <div class='flex'>
+    <span class=''><Icon pack='tabler' name='notebook' class='' /></span>Journal
+  </div>
+  <a></a>
+</div>
+
+<article>
+  <h1>{title}</h1>
+  <p>{pageDesc}</p>
+  <slot />
+</article>
+
+<style></style>
