@@ -37,12 +37,16 @@ import { Icon } from 'astro-icon';
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200%;
-    @apply bg-left transition-[background-position] duration-700;
+    animation: textclip 1.5s linear infinite;
+
+    @apply bg-left;
+  }
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
   }
 
-  .text-gradient:hover {
-    @apply bg-right;
-  }
   .instructions {
     @apply bg-subtle;
     line-height: 1.6;
