@@ -11,8 +11,8 @@
     --color-text-heading: 223, 228, 236;
     --color-text-default: 152, 170, 200;
     --color-text-subtle: 119, 131, 154;
-    --color-accent: 26, 152, 255;
-    --color-accent-hover: 0, 124, 224;
+    --color-accent: 44, 198, 241;
+    --color-accent-hover: 26, 152, 255;
     --color-gradient: linear-gradient(45deg, rgba(59, 240, 228, 1), rgba(26, 152, 255, 1) 50%, rgba(59, 240, 228, 1));
     --color-border-default: 35, 50, 77;
     --color-background-default: 4, 13, 33;
@@ -96,7 +96,7 @@
 
   .prose {
     @apply !leading-[1.7] 
-    prose-a:!outline-2 prose-a:!outline-offset-1 prose-a:!outline-default prose-a:!text-accent prose-a:!underline prose-a:!underline-offset-2 prose-a:!decoration-0 hover:prose-a:!text-accent-hover 
+    prose-a:!outline-2 prose-a:!outline-offset-1 prose-a:!outline-default prose-a:!text-accent prose-a:!underline prose-a:!underline-offset-2 prose-a:!font-normal prose-a:!decoration-0 hover:prose-a:!text-accent-hover 
     prose-lead:!text-lg prose-lead:!text-default 
     prose-headings:!font-heading prose-headings:!leading-[140%] prose-headings:!text-heading prose-headings:!mb-3 
     prose-h1:!text-2xl 
