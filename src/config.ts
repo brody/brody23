@@ -3,7 +3,7 @@ import type { Site, SocialObjects } from './types';
 export const SITE: Site = {
   website: 'https://brody.com/',
   author: 'Brody MacLean',
-  desc: 'A multi-disciplinary designer from Sydney, Australia.',
+  desc: 'Design system lead & multi-disciplinary designer from Sydney, Australia.',
   title: 'Brody MacLean',
   ogImage: 'defaultOG.jpg',
   lightAndDarkMode: true,
