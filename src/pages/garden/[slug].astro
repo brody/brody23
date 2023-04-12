@@ -1,0 +1,51 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content';
+import Leaves from '@layouts/Leaves.astro';
+import LeafDetails from '@layouts/LeafDetails.astro';
+import getAlphaSortedPosts from '@utils/getAlphaSortedPosts';
+import getPageNumbers from '@utils/getPageNumbers';
+import slugify from '@utils/slugify';
+import { SITE } from '@config';
+
+export interface Props {
+  post: CollectionEntry<'garden'>;
+}
+
+export async function getStaticPaths() {
+  const leaf = await getCollection('garden', ({ data }) => !data.draft);
+
+  const postResult = leaf.map((post) => ({
+    params: { slug: slugify(post.data) },
+    props: { post },
+  }));
+
+  const pagePaths = getPageNumbers(leaf.length).map((pageNum) => ({
+    params: { slug: String(pageNum) },
+  }));
+
+  return [...postResult, ...pagePaths];
+}
+
+const { slug } = Astro.params;
+const { post } = Astro.props;
+
+const leaf = await getCollection('garden');
+
+const sortedPosts = getAlphaSortedPosts(leaf);
+
+const totalPages = getPageNumbers(sortedPosts.length);
+
+const currentPage = slug && !isNaN(Number(slug)) && totalPages.includes(Number(slug)) ? Number(slug) : 0;
+const lastPost = currentPage * SITE.postPerPage;
+const startPost = lastPost - SITE.postPerPage;
+
+const paginatedPosts = sortedPosts.slice(startPost, lastPost);
+---
+
+{
+  post ? (
+    <LeafDetails leaf={post} />
+  ) : (
+    <Leaves leaves={paginatedPosts} pageNum={currentPage} totalPages={totalPages.length} />
+  )
+}

@@ -1,0 +1,18 @@
+---
+import { SITE } from '@config';
+import Leaves from '@layouts/Leaves.astro';
+import getAlphaSortedPosts from '@utils/getAlphaSortedPosts';
+import getPageNumbers from '@utils/getPageNumbers';
+
+import { getCollection } from 'astro:content';
+
+const leaves = await getCollection('garden');
+
+const sortedPosts = getAlphaSortedPosts(leaves);
+
+const totalPages = getPageNumbers(sortedPosts.length);
+
+const paginatedPosts = sortedPosts.slice(0, SITE.postPerPage);
+---
+
+<Leaves leaves={paginatedPosts} pageNum={1} totalPages={totalPages.length} />

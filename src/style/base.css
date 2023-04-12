@@ -95,7 +95,7 @@
   }
 
   .prose {
-    @apply !leading-[1.7] 
+    @apply !leading-[1.7] !text-default
     prose-a:!outline-2 prose-a:!outline-offset-1 prose-a:!outline-default prose-a:!text-accent prose-a:!underline prose-a:!underline-offset-2 prose-a:!font-normal prose-a:!decoration-0 hover:prose-a:!text-accent-hover 
     prose-lead:!text-lg prose-lead:!text-default 
     prose-headings:!font-heading prose-headings:!leading-[140%] prose-headings:!text-heading prose-headings:!mb-3 
@@ -111,7 +111,7 @@
     prose-ol:!text-default 
     prose-ul:overflow-x-clip 
     prose-ul:!text-default prose-li:marker:!text-accent 
-    prose-table:text-default prose-th:border prose-th:border-default prose-td:border prose-td:border-default 
+    prose-table:text-default prose-th:border prose-th:border-default prose-th:last-of-type:pr-2 prose-th:pt-2 prose-td:border prose-td:border-default prose-td:last-of-type:pr-2
     prose-img:mx-auto prose-img:!mt-2 
     prose-hr:!border-default;
   }

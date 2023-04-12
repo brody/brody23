@@ -8,6 +8,8 @@ export interface Props {
 }
 
 const { title, pageDesc } = Astro.props;
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1, 4); // remove the first & last "/"
 ---
 
 <div class='breadcrumbs not-prose mb-14'>
@@ -15,7 +17,30 @@ const { title, pageDesc } = Astro.props;
     <span class='font-heading h-lig mr-1.5 -mt-0.5'>:-)</span>Brody.com
   </a>
   <div class='flex'>
-    <span class=''><Icon pack='tabler' name='notebook' class='' /></span>Journal
+    {
+      currentPath === 'gar' ? (
+        <>
+          <span class=''>
+            <Icon pack='tabler' name='leaf' class='' />
+          </span>
+          Garden
+        </>
+      ) : (
+        ''
+      )
+    }
+    {
+      currentPath === 'jou' ? (
+        <>
+          <span class=''>
+            <Icon pack='tabler' name='notebook' class='' />
+          </span>
+          Journal
+        </>
+      ) : (
+        ''
+      )
+    }
   </div>
   <a></a>
 </div>
