@@ -14,4 +14,9 @@ export default defineConfig({
     mdx(),
     react(),
   ],
+  vite: {
+    optimizeDeps: {
+      exclude: ['@resvg/resvg-js'],
+    },
+  },
 });
