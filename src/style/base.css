@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 @layer base {
+
   ::after,
   ::before,
   :root {
@@ -95,25 +96,7 @@
   }
 
   .prose {
-    @apply !leading-[1.7] !text-default
-    prose-a:!outline-2 prose-a:!outline-offset-1 prose-a:!outline-default prose-a:!text-accent prose-a:!underline prose-a:!underline-offset-2 prose-a:!font-normal prose-a:!decoration-0 hover:prose-a:!text-accent-hover 
-    prose-lead:!text-lg prose-lead:!text-default 
-    prose-headings:!font-heading prose-headings:!leading-[140%] prose-headings:!text-heading prose-headings:!mb-3 
-    prose-h1:!text-2xl 
-    prose-h2:!text-[1.375rem] 
-    prose-h3:!text-lg 
-    prose-p:!text-default 
-    prose-blockquote:!border-l-accent prose-blockquote:border-opacity-50 prose-blockquote:opacity-80 prose-blockquote:!text-default prose-blockquote:!font-normal prose-blockquote:!not-italic
-    prose-figcaption:!text-subtle prose-figcaption:opacity-80 
-    prose-strong:!text-default 
-    prose-code:rounded prose-code:!bg-subtle prose-code:p-1.5 prose-code:!text-heading prose-code:!font-normal prose-code:before:!content-[''] prose-code:after:!content-[''] 
-    prose-pre:!text-default prose-pre:!bg-subtle prose-pre:!leading-relaxed 
-    prose-ol:!text-default 
-    prose-ul:overflow-x-clip 
-    prose-ul:!text-default prose-li:marker:!text-accent 
-    prose-table:text-default prose-th:border prose-th:border-default prose-th:last-of-type:pr-2 prose-th:pt-2 prose-td:border prose-td:border-default prose-td:last-of-type:pr-2
-    prose-img:mx-auto prose-img:!mt-2 
-    prose-hr:!border-default;
+    @apply !leading-[1.7] !text-default prose-a:!outline-2 prose-a:!outline-offset-1 prose-a:!outline-default prose-a:!text-accent prose-a:!underline prose-a:!underline-offset-2 prose-a:!font-normal prose-a:!decoration-0 hover:prose-a:!text-accent-hover prose-lead:!text-lg prose-lead:!text-default prose-headings:!font-heading prose-headings:!leading-[140%] prose-headings:!text-heading prose-headings:!mb-3 prose-h1:!text-2xl prose-h2:!text-[1.375rem] prose-h3:!text-lg prose-p:!text-default prose-blockquote:!border-l-accent prose-blockquote:border-opacity-50 prose-blockquote:opacity-80 prose-blockquote:!text-default prose-blockquote:!font-normal prose-blockquote:!not-italic prose-figcaption:!text-subtle prose-figcaption:opacity-80 prose-strong:!text-default prose-code:rounded prose-code:!bg-subtle prose-code:p-1.5 prose-code:!text-heading prose-code:!font-normal prose-code:before:!content-[''] prose-code:after:!content-[''] prose-pre:!text-default prose-pre:!bg-subtle prose-pre:!leading-relaxed prose-ol:!text-default prose-ul:overflow-x-clip prose-ul:!text-default prose-li:marker:!text-accent prose-table:text-default prose-th:border prose-th:border-default prose-th:last-of-type:pr-2 prose-th:pt-2 prose-td:border prose-td:border-default prose-td:last-of-type:pr-2 prose-img:mx-auto prose-img:!mt-2 prose-hr:!border-default;
   }
 
   .prose thead th:first-child,
@@ -134,7 +117,7 @@
     @apply focus-outline;
   }
 
-  .prose h2#table-of-contents + p {
+  .prose h2#table-of-contents+p {
     @apply hidden;
   }
 
@@ -181,7 +164,7 @@
     @apply text-subtle hover:text-accent flex items-center no-underline;
   }
 
-  .breadcrumbs > * + :before {
+  .breadcrumbs>*+ :before {
     @apply text-border mx-1 content-['/'];
   }
 
