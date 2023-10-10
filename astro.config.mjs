@@ -9,7 +9,7 @@ export default defineConfig({
   site: SITE.website,
   integrations: [
     tailwind({
-      // config: { applyBaseStyles: false },
+      config: { applyBaseStyles: false },
     }),
     mdx(),
     react(),

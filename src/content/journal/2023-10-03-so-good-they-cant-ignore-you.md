@@ -9,6 +9,12 @@ tags:
   - career
 ---
 
+
+
+
+> <span class="text-xl text-accent">“Be so good they can't ignore you.”</span><br />
+> — Steve Martin
+
 ## Rule #1: Don’t Follow Your Passion
 
 * The Passion Hypothesis, which claims that finding a job that aligns with your passion leads to occupational happiness, is a common misconception.
