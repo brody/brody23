@@ -6,6 +6,13 @@
   main {
     @apply pointer-events-none z-10;
   }
+
+  @media (hover: none) {
+    #draw {
+      display: none;
+    }
+  }
+
   @media (hover: hover) and (pointer: fine) {
     body {
       /* cursor: var(--cursorMarker); */
