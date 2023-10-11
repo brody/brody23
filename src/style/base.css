@@ -140,7 +140,7 @@
   }
   @media (hover: hover) and (pointer: fine) {
     body {
-      cursor: var(--cursorDefault);
+      @apply cursor-default;
     }
     p,
     h1,
@@ -161,6 +161,7 @@
     a *,
     button,
     button * {
+      @apply pointer-events-auto;
       cursor: var(--cursorPointer);
     }
   }
