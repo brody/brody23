@@ -5,11 +5,12 @@
 /* @import './fonts.css'; */
 
 @layer base {
-
   @font-face {
     font-family: "Wotfard";
     src: url("/assets/fonts/wotfard-regular-webfont.eot");
-    src: url("/assets/fonts/wotfard-regular-webfont.eot?#iefix") format("embedded-opentype"),
+    src:
+      url("/assets/fonts/wotfard-regular-webfont.eot?#iefix")
+        format("embedded-opentype"),
       url("/assets/fonts/wotfard-regular-webfont.woff2") format("woff2"),
       url("/assets/fonts/wotfard-regular-webfont.ttf") format("truetype");
     font-weight: 400;
@@ -20,7 +21,9 @@
   @font-face {
     font-family: "Wotfard";
     src: url("/assets/fonts/wotfard-regularitalic-webfont.eot");
-    src: url("/assets/fonts/wotfard-regularitalic-webfont.eot?#iefix") format("embedded-opentype"),
+    src:
+      url("/assets/fonts/wotfard-regularitalic-webfont.eot?#iefix")
+        format("embedded-opentype"),
       url("/assets/fonts/wotfard-regularitalic-webfont.woff2") format("woff2"),
       url("/assets/fonts/wotfard-regularitalic-webfont.ttf") format("truetype");
     font-weight: 400;
@@ -31,7 +34,9 @@
   @font-face {
     font-family: "Wotfard";
     src: url("/assets/fonts/wotfard-medium-webfont.eot");
-    src: url("/assets/fonts/wotfard-medium-webfont.eot?#iefix") format("embedded-opentype"),
+    src:
+      url("/assets/fonts/wotfard-medium-webfont.eot?#iefix")
+        format("embedded-opentype"),
       url("/assets/fonts/wotfard-medium-webfont.woff2") format("woff2"),
       url("/assets/fonts/wotfard-medium-webfont.ttf") format("truetype");
     font-weight: 500;
@@ -42,7 +47,9 @@
   @font-face {
     font-family: "Wotfard";
     src: url("/assets/fonts/wotfard-semibold-webfont.eot");
-    src: url("/assets/fonts/wotfard-semibold-webfont.eot?#iefix") format("embedded-opentype"),
+    src:
+      url("/assets/fonts/wotfard-semibold-webfont.eot?#iefix")
+        format("embedded-opentype"),
       url("/assets/fonts/wotfard-semibold-webfont.woff2") format("woff2"),
       url("/assets/fonts/wotfard-semibold-webfont.ttf") format("truetype");
     font-weight: 600;
@@ -74,7 +81,12 @@
     --color-text-subtle: 119, 131, 154;
     --color-accent: 44, 198, 241;
     --color-accent-hover: 26, 152, 255;
-    --color-gradient: linear-gradient(45deg, rgba(59, 240, 228, 1), rgba(26, 152, 255, 1) 50%, rgba(59, 240, 228, 1));
+    --color-gradient: linear-gradient(
+      45deg,
+      rgba(59, 240, 228, 1),
+      rgba(26, 152, 255, 1) 50%,
+      rgba(59, 240, 228, 1)
+    );
     --color-border-default: 35, 50, 77;
     --color-background-default: 4, 13, 33;
     --color-background-subtle: 12, 22, 44;
@@ -99,17 +111,17 @@
   } */
 
   #sun-svg,
-  html[data-theme='dark'] #moon-svg {
+  html[data-theme="dark"] #moon-svg {
     display: none;
   }
 
   #moon-svg,
-  html[data-theme='dark'] #sun-svg {
+  html[data-theme="dark"] #sun-svg {
     display: block;
   }
 
   body {
-    @apply flex min-h-screen flex-col bg-default font-body text-default selection:bg-selection selection:bg-opacity-30 selection:text-heading antialiased;
+    @apply flex min-h-screen flex-col bg-default font-body text-default antialiased selection:bg-selection selection:bg-opacity-30 selection:text-heading;
   }
 
   h1,
@@ -119,8 +131,16 @@
   h5,
   .h-lig {
     /* @apply font-heading leading-[140%] text-heading; */
-    font-feature-settings: 'salt' on, 'ss01' on, 'ss03' on, 'ss04' on, 'ss06' on, 'ss07' on, 'ss08' on, 'ss09' on,
-      'ss10' on;
+    font-feature-settings:
+      "salt" on,
+      "ss01" on,
+      "ss03" on,
+      "ss04" on,
+      "ss06" on,
+      "ss07" on,
+      "ss08" on,
+      "ss09" on,
+      "ss10" on;
     font-variant-ligatures: discretionary-ligatures;
   }
 
@@ -134,7 +154,7 @@
   }
 
   a {
-    @apply outline-2 outline-offset-1 outline-default focus-visible:no-underline focus-visible:outline-dashed focus-visible:rounded text-accent underline underline-offset-2 decoration-1 hover:text-accent-hover;
+    @apply text-accent underline decoration-1 underline-offset-2 outline-2 outline-offset-1 outline-default hover:text-accent-hover focus-visible:rounded focus-visible:no-underline focus-visible:outline-dashed;
   }
 
   pre,
@@ -148,7 +168,7 @@
   }
 
   mark {
-    @apply bg-accent bg-opacity-30 text-heading p-0.5;
+    @apply bg-accent bg-opacity-30 p-0.5 text-heading;
   }
 
   iframe {
@@ -156,7 +176,7 @@
   }
 
   .prose {
-    @apply !leading-[1.7] !text-default prose-a:!outline-2 prose-a:!outline-offset-1 prose-a:!outline-default prose-a:!text-accent prose-a:!underline prose-a:!underline-offset-2 prose-a:!font-normal prose-a:!decoration-0 hover:prose-a:!text-accent-hover prose-lead:!text-lg prose-lead:!text-default prose-headings:!font-heading prose-headings:!leading-[140%] prose-headings:!text-heading prose-headings:!mb-3 prose-h1:!text-2xl prose-h2:!text-[1.375rem] prose-h3:!text-lg prose-p:!text-default prose-blockquote:!border-l-accent prose-blockquote:border-opacity-50 prose-blockquote:opacity-80 prose-blockquote:!text-default prose-blockquote:!font-normal prose-blockquote:!not-italic prose-figcaption:!text-subtle prose-figcaption:opacity-80 prose-strong:!text-default prose-code:rounded prose-code:!bg-subtle prose-code:p-1.5 prose-code:!text-heading prose-code:!font-normal prose-code:before:!content-[''] prose-code:after:!content-[''] prose-pre:!text-default prose-pre:!bg-subtle prose-pre:!leading-relaxed prose-ol:!text-default prose-ul:overflow-x-clip prose-ul:!text-default prose-li:marker:!text-accent prose-table:text-default prose-th:border prose-th:border-default prose-th:last-of-type:pr-2 prose-th:pt-2 prose-td:border prose-td:border-default prose-td:last-of-type:pr-2 prose-img:mx-auto prose-img:!mt-2 prose-hr:!border-default;
+    @apply !leading-[1.7] !text-default prose-headings:!mb-3 prose-headings:!font-heading prose-headings:!leading-[140%] prose-headings:!text-heading prose-h1:!text-2xl prose-h2:!text-[1.375rem] prose-h3:!text-lg prose-p:!text-default prose-a:!font-normal prose-a:!text-accent prose-a:!underline prose-a:!decoration-0 prose-a:!underline-offset-2 prose-a:!outline-2 prose-a:!outline-offset-1 prose-a:!outline-default hover:prose-a:!text-accent-hover prose-blockquote:!border-l-accent prose-blockquote:border-opacity-50 prose-blockquote:!font-normal prose-blockquote:!not-italic prose-blockquote:!text-default prose-blockquote:opacity-80 prose-figcaption:!text-subtle prose-figcaption:opacity-80 prose-strong:!text-default prose-code:rounded prose-code:!bg-subtle prose-code:p-1.5 prose-code:!font-normal prose-code:!text-heading prose-code:before:!content-[''] prose-code:after:!content-[''] prose-pre:!bg-subtle prose-pre:!leading-relaxed prose-pre:!text-default prose-ol:!text-default prose-ul:overflow-x-clip prose-ul:!text-default prose-li:marker:!text-accent prose-table:text-default prose-th:border prose-th:border-default prose-th:pt-2 prose-th:last-of-type:pr-2 prose-td:border prose-td:border-default prose-td:last-of-type:pr-2 prose-img:mx-auto prose-img:!mt-2 prose-hr:!border-default prose-lead:!text-lg prose-lead:!text-default;
   }
 
   .prose thead th:first-child,
@@ -177,7 +197,7 @@
     @apply focus-outline;
   }
 
-  .prose h2#table-of-contents+p {
+  .prose h2#table-of-contents + p {
     @apply hidden;
   }
 
@@ -217,19 +237,19 @@
   }
 
   .breadcrumbs {
-    @apply flex items-center text-sm font-code text-subtle uppercase;
+    @apply flex items-center font-code text-sm uppercase text-subtle;
   }
 
   .breadcrumbs a {
-    @apply text-subtle hover:text-accent flex items-center no-underline;
+    @apply flex items-center text-subtle no-underline hover:text-accent;
   }
 
-  .breadcrumbs>*+ :before {
-    @apply text-border mx-1 content-['/'];
+  .breadcrumbs > * + :before {
+    @apply mx-1 text-border content-['/'];
   }
 
   .breadcrumbs svg {
-    @apply inline-block w-4 h-4 mr-1 -mt-0.5;
+    @apply -mt-0.5 mr-1 inline-block h-4 w-4;
   }
 
   .breadcrumbs svg * {

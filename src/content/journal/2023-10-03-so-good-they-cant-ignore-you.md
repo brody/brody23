@@ -10,8 +10,6 @@ tags:
 ---
 
 
-
-
 > <span class="text-xl text-accent">“Be so good they can't ignore you.”</span><br />
 > — Steve Martin
 
