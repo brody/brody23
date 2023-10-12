@@ -142,6 +142,10 @@
     body {
       @apply cursor-default;
     }
+
+    main.container {
+      @apply pointer-events-none;
+    }
     p,
     h1,
     h2,

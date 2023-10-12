@@ -115,9 +115,7 @@ const pathname = new URL(Astro.request.url).pathname;
     {pathname == "/" && <Draw />}
 
     <main
-      class={pathname === "/"
-        ? "container prose [@media(any-hover:hover)]:pointer-events-none z-10"
-        : "container prose"}
+      class={pathname === "/" ? "container prose  z-10" : "container prose"}
     >
       <slot />
     </main>
