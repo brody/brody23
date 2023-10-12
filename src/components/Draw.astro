@@ -3,10 +3,6 @@
 </div>
 
 <style>
-  main {
-    @apply pointer-events-none z-10;
-  }
-
   @media (hover: none) {
     #draw {
       display: none;
@@ -17,7 +13,9 @@
     body {
       /* cursor: var(--cursorMarker); */
     }
-    ,
+    main.homepage {
+      @apply pointer-events-none;
+    }
     p,
     h1,
     h2,

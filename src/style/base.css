@@ -143,9 +143,10 @@
       @apply cursor-default;
     }
 
-    main.container {
-      @apply pointer-events-none;
+    main.homepage {
+      @apply pointer-events-none z-10;
     }
+
     p,
     h1,
     h2,
