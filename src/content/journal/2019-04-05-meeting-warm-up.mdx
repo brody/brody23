@@ -11,7 +11,16 @@ tags:
   - culture
 ---
 
-![cover](/assets/journal/meeting-warm-up/cover.png)
+import { Image } from "astro:assets";
+import cover from "/public/assets/journal/meeting-warm-up/cover.png";
+import warmup1 from "/public/assets/journal/meeting-warm-up/sketches.png";
+import warmup2 from "/public/assets/journal/meeting-warm-up/sketches2.png";
+
+<Image
+  src={cover}
+  alt="Meeting with drawing ice breaker on screen"
+  class="wide"
+/>
 
 Recently, I've been running a game of Pictionary, before our designer catch-up meetings, to break the ice and get the creative juices flowing.
 
@@ -41,6 +50,5 @@ You only need a few things to run one yourself, with both local and remote team 
 
 Enjoy! 👍
 
-![Warm-up Sketch](/assets/journal/meeting-warm-up/sketches.png)
-
-![Warm-up Sketch](/assets/journal/meeting-warm-up/sketches2.png)
+<Image src={warmup1} alt="Warm-up Sketch 1" class="wide" />
+<Image src={warmup2} alt="Warm-up Sketch 2" class="wide" />

@@ -13,6 +13,6 @@ tags:
 
 Next time you impatiently press a pedestrian crossing button again and again, spare a thought for its ingenious design.
 
-<div class="my-5 mx-0 md:-mx-16">
-<iframe width="560" height="350" class="w-full" src="https://www.youtube.com/embed/FwbNFRbqwfg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="">
+  <iframe width="560" height="350" class="w-full aspect-video md:wide" src="https://www.youtube.com/embed/FwbNFRbqwfg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

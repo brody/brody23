@@ -248,6 +248,10 @@
     @apply hidden;
   }
 
+  .wide {
+    @apply -ml-5 w-screen max-w-fit md:w-[calc(100vw-80px)] md:max-w-[720px];
+  }
+
   /* ===== scrollbar ===== */
   html {
     overflow-y: scroll;

@@ -1,19 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon";
+import { Image } from "astro:assets";
+import profile from "/public/brody.png";
 ---
 
 <Layout title="Brody MacLean">
-  <img
-    src="./brody.png"
+  <Image
+    src={profile}
     alt="Brody MacLean"
-    class="rounded-full h-16 w-16 m-0 not-prose"
+    class="w-16 h-16 m-0 rounded-full not-prose"
   />
+
   <h1 class="mt-4">
     G'day, I'm <span class="text-gradient">Brody MacLean</span>, a
     multi-disciplinary designer from Sydney, Australia. :-)
   </h1>
-  <div class="breadcrumbs not-prose mt-4">
+  <div class="mt-4 breadcrumbs not-prose">
     <a href="/journal">
       <Icon pack="tabler" name="notebook" class="" />
        Journal
@@ -30,7 +33,7 @@ import { Icon } from "astro-icon";
     >
   </div>
 
-  <p class="lead mt-4">
+  <p class="mt-4 lead">
     Currently, I am Design System Lead at <a
       href="https://prospa.com/"
       target="_blank">Prospa</a
