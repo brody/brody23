@@ -9,15 +9,19 @@ description: A design-forward, aesthetic exploration of some core principles of 
 ogImage: /assets/journal/uber-design-77-things/cover.png
 tags:
   - design
-# source-title: 77 Things About Uber Design
-# source-url: https://medium.com/uber-design/77-things-about-uber-design-4621516e495c
-# source-url-label: medium.com
 ---
 
 import { Image } from "astro:assets";
 import uber77things from "/public/assets/journal/uber-design-77-things/cover.png";
+import Source from "components/source.astro";
 
 <Image src={uber77things} alt="Uber Design's 77 Things book" class="wide" />
+
+<Source
+  url="https://medium.com/uber-design/77-things-about-uber-design-4621516e495c"
+  title="77 Things About Uber Design"
+  domain="medium.com"
+/>
 
 Alongside the 2018 rebrand, Uber published "77 Things", a book written by Uber's Head of Design, [Michael Gough](https://twitter.com/michaelgough_), with 77 design principles for those who design at Uber.
 

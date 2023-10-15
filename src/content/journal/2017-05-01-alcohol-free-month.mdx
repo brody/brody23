@@ -10,6 +10,11 @@ ogImage: /assets/journal/alcohol-free-month/cover.jpg
 description: I can already hear the jeers from friends, but having abstained for 4 week blocks in the past, I know there are plenty benefits to taking a break from the hard stuff.
 ---
 
+import { Image } from "astro:assets";
+import alcohol from "/public/assets/journal/alcohol-free-month/cover.jpg";
+
+<Image src={alcohol} alt="People clinking classes of beer" class="wide" />
+
 Make mine a virgin. 🍹
 
 Like most Aussie's, I have a love/hate relationship with booze. At times it's a fun social lubricant, but all too often that can lead to hazy memories of the night, feeling lethargic the following day. So I've decided to take the month of May off alcohol.

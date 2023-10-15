@@ -1,0 +1,35 @@
+---
+const { url, title, domain } = Astro.props;
+import { Icon } from "astro-icon";
+---
+
+<div class="bg-subtle px-5 py-4 rounded-md mb-10 not-prose">
+  <span class="font-mono text-subtle block text-xs mb-1">Source:</span>
+  <span class="block text-heading font-heading mb-2 leading-normal"
+    >{title}</span
+  >
+
+  <a
+    href={url}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="bg-accent
+    inline-flex
+    rounded-md
+    px-2.5
+    py-1
+    font-medium
+    text-sm
+    hover:bg-accentHover
+    transition-colors"
+  >
+    <Icon
+      pack="tabler"
+      name="external-link"
+      class="text-border w-4 inline-flex mr-1"
+    />
+    <span class="text-border">
+      {domain}
+    </span>
+  </a>
+</div>

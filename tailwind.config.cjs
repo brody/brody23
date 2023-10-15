@@ -38,6 +38,7 @@ module.exports = {
       subtle: withOpacity("--color-background-subtle"),
       selection: withOpacity("--color-text-default"),
       accent: withOpacity("--color-accent"),
+      accentHover: withOpacity("--color-accent-hover"),
     },
     outlineColor: {
       default: withOpacity("--color-accent"),

@@ -1,0 +1,36 @@
+---
+const { url, title, author, domain, cover } = Astro.props;
+import { Icon } from "astro-icon";
+import { Image } from "astro:assets";
+// const bookPath = `/assets/journal/${cover}`;
+// import bookCover from `$(bookPath)`;
+---
+
+<div
+  class="bg-subtle px-5 py-4 rounded-md mb-10 not-prose flex flex-row gap-x-5"
+>
+  <!-- <Image
+    src={bookCover}
+    alt="Kindle with Reinventing organizations cover"
+    class="wide"
+  /> -->
+  <img src={cover} alt={title} class="h-24 w-auto rounded-sm" />
+  <div class="flex flex-col">
+    <span class="text-heading font-heading text-lg leading-normal">
+      {title}
+    </span>
+    <span class="text-subtle mb-2">{author}</span>
+
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="bg-accent self-start rounded-md px-2.5 py-1 font-medium text-sm hover:bg-accentHover transition-colors flex flex-row"
+    >
+      <Icon pack="tabler" name="external-link" class="text-border w-4 mr-1" />
+      <span class="text-border">
+        {domain}
+      </span>
+    </a>
+  </div>
+</div>
