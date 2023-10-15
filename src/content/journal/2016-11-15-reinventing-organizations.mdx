@@ -13,7 +13,6 @@ description: The book that has inspired organizations to take a radical leap and
 import { Image } from "astro:assets";
 import reinventing from "/public/assets/journal/reinventing-organizations/cover.jpg";
 
-import Book from "components/book.astro";
 
 <Image
   src={reinventing}
@@ -21,17 +20,15 @@ import Book from "components/book.astro";
   class="wide"
 />
 
-<Book
+{/* <Book
   url="http://www.amazon.com/gp/product/B00ICS9VI4"
   title="Reinventing Organizations"
   author="Frederic Laloux"
   cover="/assets/journal/reinventing-organizations/book.jpg"
   domain="amazon.com"
-/>
+/> */}
 
-<p class="text-lg">
-  Adopt a whole different set of management principles and practices.
-</p>
+
 
 [Reinventing Organizations](http://www.amazon.com/gp/product/B00ICS9VI4) by Frédéric Laloux comes [highly recommended](http://joel.is/50-books-that-transformed-my-business-and-my-life/) by Buffer’s, co-founder & CEO, Joel Gascoigne, so much so that it’s a [prerequisite read](https://buffer.com/journey) for new hires at the startup.
 
