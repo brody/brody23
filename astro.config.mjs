@@ -4,7 +4,6 @@ import mdx from "@astrojs/mdx";
 import { SITE } from "./src/config";
 import react from "@astrojs/react";
 
-import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,7 +17,5 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"]
     }
-  },
-  output: "server",
-  adapter: netlify()
+  }
 });
