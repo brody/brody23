@@ -29,7 +29,7 @@ A Twitter thread worth reading for tips on the "new normal" of remote work.
 - More time for family & friends
 - Get a noise-cancelling headset
 - Block off time in your calendar
-- Have a ‘transition’ activity
+- Have a ‘transition' activity
 - Document everything you do
 - Separate work & living space
 - Take walking meetings
