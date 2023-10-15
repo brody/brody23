@@ -17,5 +17,10 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ["@resvg/resvg-js", "Book.astro", "Source.astro"] 
     }
-  }
+  },
+  // build: {
+  //     rollupOptions: {
+  //       external: 'NonExistingPath'
+  //     }
+  //   },
 });
