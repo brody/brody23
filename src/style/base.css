@@ -238,7 +238,18 @@
     @apply text-lg;
   }
   .prose {
-    @apply !leading-[1.7] !text-default prose-headings:!mb-3 prose-headings:!font-heading prose-headings:!leading-[140%] prose-headings:!text-heading prose-h1:!text-2xl prose-h2:!text-[1.375rem] prose-h3:!text-lg prose-p:!text-default prose-a:!font-normal prose-a:!text-accent prose-a:!underline prose-a:!decoration-0 prose-a:!underline-offset-2 prose-a:!outline-2 prose-a:!outline-offset-1 prose-a:!outline-default hover:prose-a:!text-accent-hover prose-blockquote:!border-l-accent prose-blockquote:border-opacity-50 prose-blockquote:!font-normal prose-blockquote:!not-italic prose-blockquote:!text-default prose-blockquote:opacity-90 prose-figcaption:!text-subtle prose-figcaption:opacity-80 prose-strong:!text-default prose-code:rounded prose-code:!bg-subtle prose-code:p-1.5 prose-code:!font-normal prose-code:!text-heading prose-code:before:!content-[''] prose-code:after:!content-[''] prose-pre:!bg-subtle prose-pre:!leading-relaxed prose-pre:!text-default prose-ol:!text-default prose-ul:overflow-x-clip prose-ul:!text-default prose-li:marker:!text-accent prose-table:text-default prose-th:border prose-th:border-default prose-th:pt-2 prose-th:last-of-type:pr-2 prose-td:border prose-td:border-default prose-td:last-of-type:pr-2 prose-img:mx-auto prose-img:!mt-2 prose-hr:!border-default prose-lead:!text-lg prose-lead:!text-default;
+    @apply !leading-[1.7] !text-default prose-headings:!mb-3 prose-headings:!font-heading prose-headings:!leading-[140%] prose-headings:!text-heading prose-h1:!text-2xl prose-h2:!text-[1.375rem] prose-h3:!text-lg prose-p:!text-default prose-a:!font-normal prose-a:!text-accent prose-a:!underline prose-a:!decoration-0 prose-a:!underline-offset-2 prose-a:!outline-2 prose-a:!outline-offset-1 prose-a:!outline-default hover:prose-a:!text-accent-hover prose-blockquote:!border-l-accent prose-blockquote:border-opacity-50 prose-blockquote:!font-normal prose-blockquote:!not-italic prose-blockquote:!text-default prose-blockquote:opacity-90 prose-figcaption:!text-subtle prose-figcaption:opacity-80 prose-strong:!text-default prose-code:rounded prose-code:!bg-subtle prose-code:p-1.5 prose-code:!font-normal prose-code:!text-heading prose-code:before:!content-[''] prose-code:after:!content-[''] prose-pre:!bg-subtle prose-pre:!leading-relaxed prose-pre:!text-default prose-ol:!text-default prose-ul:overflow-x-clip prose-ul:!text-default prose-li:marker:!text-accent prose-table:text-default prose-th:border prose-th:border-default prose-th:pt-2 prose-th:last-of-type:pr-2 prose-td:border prose-td:border-default prose-td:last-of-type:pr-2 prose-img:mx-auto prose-img:!mt-8 prose-hr:!border-default prose-lead:!text-lg prose-lead:!text-default;
+  }
+
+  .prose section {
+    @apply px-0;
+  }
+
+  mark {
+    border-radius: 4rem 2rem 4.2rem 1.1rem;
+    padding: 0.125rem 0.25rem;
+    margin: -0.125rem -0.25rem;
+    /* text-wrap: nowrap; */
   }
 
   .prose thead th:first-child,
@@ -303,11 +314,11 @@
   }
 
   .breadcrumbs {
-    @apply flex items-center font-code text-sm uppercase text-subtle;
+    @apply sticky top-0 z-10 -mx-5 -mb-4 -mt-4 flex items-center rounded-full bg-default bg-opacity-90 px-5 pb-2 pt-2 font-code text-sm uppercase text-subtle backdrop-blur-sm;
   }
 
   .breadcrumbs a {
-    @apply flex items-center text-subtle no-underline transition-colors hover:text-accent;
+    @apply flex items-center py-2 text-subtle no-underline transition-colors hover:text-accent;
   }
 
   .breadcrumbs > * + :before {

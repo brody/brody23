@@ -1,0 +1,133 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon";
+import { Image } from "astro:assets";
+import brandLaunch from "/public/brand.jpg";
+import Main from "@layouts/Main.astro";
+import { SITE } from "@config";
+---
+
+<Layout title={`About • ${SITE.title}`}>
+  <Main title="About">
+    <section class="mb-20">
+      <p>
+        I am currently Design System Lead at
+        <a
+          href="https://www.prospa.com/"
+          target="_blank"
+          rel="noopener noreferrer">Prospa</a
+        >, giving our designers and developers the tools to keep small
+        businesses moving.
+      </p>
+      <p>
+        I am responsible for identifying business, design, and development
+        needs, defining parameters for design system componentry, documentation,
+        and governance, and leading our team to create and deploy a functional
+        and durable design system to our users.
+      </p>
+      <p>
+        With over 14+ years of experience in product design & a previous 6 years
+        in graphic, print, marketing & digital design. A knack for
+        problem-solving & visual design and my keen curiosity has me always
+        looking to expand my knowledge in all things design & technology.
+      </p>
+
+      <Image
+        src={brandLaunch}
+        alt="Brody MacLean presenting at the Prospa brand launch"
+        class="wide"
+      />
+    </section>
+
+    <section class="mb-20">
+      <h2 class="mb-5">Vision</h2>
+      <p>
+        I want to work on meaningful and valuable products that do good, for
+        mankind, nature and the planet. I want to dedicate my skills, experience
+        and knowledge to projects and people who want to
+        <mark>make this world a better place</mark>.
+      </p>
+    </section>
+
+    <section class="">
+      <h2 class="mb-5">Connect with me</h2>
+      <div class="flex flex-wrap">
+        <a
+          href="https://twitter.com/BrodyMaclean"
+          target="_blank"
+          class="relative flex items-center w-1/2 py-2 shadow-none sm:w-1/3 md:w-1/4"
+        >
+          <Icon
+            pack="tabler"
+            name="brand-twitter"
+            class="inline-block w-5 h-5 mr-2 opacity-75 fill-current"
+          />
+
+           Twitter
+        </a>
+        <a
+          href="https://instagram.com/Brody"
+          target="_blank"
+          class="relative flex items-center w-1/2 py-2 shadow-none sm:w-1/3 md:w-1/4"
+        >
+          <Icon
+            pack="tabler"
+            name="brand-instagram"
+            class="inline-block w-5 h-5 mr-2 opacity-75 fill-current"
+          />
+           Instagram
+        </a>
+        <a
+          href="https://www.linkedin.com/in/BrodyMaclean/"
+          target="_blank"
+          class="relative flex items-center w-1/2 py-2 shadow-none sm:w-1/3 md:w-1/4"
+        >
+          <Icon
+            pack="tabler"
+            name="brand-linkedin"
+            class="inline-block w-5 h-5 mr-2 opacity-75 fill-current"
+          />
+           LinkedIn
+        </a>
+        <a
+          href="https://codepen.io/Brody"
+          target="_blank"
+          class="relative flex items-center w-1/2 py-2 shadow-none sm:w-1/3 md:w-1/4"
+        >
+          <Icon
+            pack="tabler"
+            name="brand-codepen"
+            class="inline-block w-5 h-5 mr-2 opacity-75 fill-current"
+          />
+           Codepen
+        </a>
+        <a
+          href="https://github.com/Brody"
+          target="_blank"
+          class="relative flex items-center w-1/2 py-2 shadow-none sm:w-1/3 md:w-1/4"
+        >
+          <Icon
+            pack="tabler"
+            name="brand-github"
+            class="inline-block w-5 h-5 mr-2 opacity-75 fill-current"
+          />
+           Github
+        </a>
+        <a
+          href="mailto:hello@brody.com?Subject=G'day Brody!"
+          target="_blank"
+          class="relative flex items-center w-1/2 py-2 shadow-none sm:w-1/3 md:w-1/4"
+        >
+          <Icon
+            pack="tabler"
+            name="mailbox"
+            class="inline-block w-5 h-5 mr-2 opacity-75 fill-current"
+          />
+           Email
+        </a>
+      </div>
+    </section>
+  </Main>
+</Layout>
+
+<style></style>

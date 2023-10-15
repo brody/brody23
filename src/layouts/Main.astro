@@ -1,6 +1,6 @@
 ---
-import Breadcrumbs from '@components/Breadcrumbs.astro';
-import { Icon } from 'astro-icon';
+import Breadcrumbs from "@components/Breadcrumbs.astro";
+import { Icon } from "astro-icon";
 
 export interface Props {
   title: string;
@@ -12,33 +12,45 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1, 4); // remove the first & last "/"
 ---
 
-<div class='breadcrumbs not-prose mb-14'>
-  <a href='/'>
-    <span class='font-heading h-lig mr-1.5 -mt-0.5'>:-)</span>Brody.com
+<div class="breadcrumbs not-prose mb-[3.25rem]">
+  <a href="/">
+    <span class="font-heading h-lig mr-1.5 -mt-0.5">:-)</span>Brody.com
   </a>
-  <div class='flex'>
+  <div class="flex">
     {
-      currentPath === 'gar' ? (
+      currentPath === "gar" ? (
         <>
-          <span class=''>
-            <Icon pack='tabler' name='leaf' class='' />
+          <span class="">
+            <Icon pack="tabler" name="leaf" class="" />
           </span>
           Garden
         </>
       ) : (
-        ''
+        ""
       )
     }
     {
-      currentPath === 'jou' ? (
+      currentPath === "jou" ? (
         <>
-          <span class=''>
-            <Icon pack='tabler' name='notebook' class='' />
+          <span class="">
+            <Icon pack="tabler" name="notebook" class="" />
           </span>
           Journal
         </>
       ) : (
-        ''
+        ""
+      )
+    }
+    {
+      currentPath === "abo" ? (
+        <>
+          <span class="">
+            <Icon pack="tabler" name="user" class="" />
+          </span>
+          About
+        </>
+      ) : (
+        ""
       )
     }
   </div>
