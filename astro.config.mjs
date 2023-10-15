@@ -15,7 +15,7 @@ export default defineConfig({
   }), mdx(), react()],
   vite: {
     optimizeDeps: {
-      exclude: ["@resvg/resvg-js"]
+      exclude: ["@resvg/resvg-js", "Book.astro", "Source.astro"] 
     }
   }
 });

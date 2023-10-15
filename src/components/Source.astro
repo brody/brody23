@@ -3,11 +3,11 @@ const { url, title, domain } = Astro.props;
 import { Icon } from "astro-icon";
 ---
 
-<div class="bg-subtle px-5 py-4 rounded-md mb-10 not-prose">
-  <span class="font-mono text-subtle block text-xs mb-1">Source:</span>
-  <span class="block text-heading font-heading mb-2 leading-normal"
-    >{title}</span
-  >
+<div class="px-5 py-4 mb-10 rounded-md bg-subtle not-prose">
+  <span class="block mb-1 font-mono text-xs text-subtle">Source:</span>
+  <span class="block mb-2 leading-normal text-heading font-heading">
+    {title}
+  </span>
 
   <a
     href={url}
@@ -26,7 +26,7 @@ import { Icon } from "astro-icon";
     <Icon
       pack="tabler"
       name="external-link"
-      class="text-border w-4 inline-flex mr-1"
+      class="inline-flex w-4 mr-1 text-border"
     />
     <span class="text-border">
       {domain}
