@@ -1,4 +1,4 @@
-import { z } from 'astro:content';
+import { z } from "astro:content";
 
 export const journalSchema = z
   .object({
@@ -7,7 +7,7 @@ export const journalSchema = z
     entrySlug: z.string().optional(),
     featured: z.boolean().optional(),
     draft: z.boolean().optional(),
-    tags: z.array(z.string()).default(['others']),
+    tags: z.array(z.string()).default(["others"]),
     ogImage: z.string().optional(),
     description: z.string(),
   })
@@ -20,11 +20,25 @@ export const gardenSchema = z
     entrySlug: z.string().optional(),
     featured: z.boolean().optional(),
     draft: z.boolean().optional(),
-    tags: z.array(z.string()).default(['others']),
+    tags: z.array(z.string()).default(["others"]),
     ogImage: z.string().optional(),
     description: z.string().optional(),
   })
   .strict();
 
+export const workSchema = z
+  .object({
+    pubDatetime: z.date(),
+    title: z.string(),
+    entrySlug: z.string().optional(),
+    featured: z.boolean().optional(),
+    draft: z.boolean().optional(),
+    ogImage: z.string().optional(),
+    description: z.string(),
+    featuredImage: z.string().optional(),
+  })
+  .strict();
+
 export type BlogFrontmatter = z.infer<typeof journalSchema>;
 export type GardenFrontmatter = z.infer<typeof gardenSchema>;
+export type WorkFrontmatter = z.infer<typeof workSchema>;

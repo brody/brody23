@@ -1,13 +1,13 @@
 // import Date from './Date.astro';
-import type { BlogFrontmatter } from '@content/_schemas';
-import { format, parseISO } from 'date-fns';
+import type { BlogFrontmatter } from "@content/_schemas";
+import { format, parseISO } from "date-fns";
 
 export interface Props {
   href?: string;
   frontmatter: BlogFrontmatter;
   secHeading?: boolean;
 }
-let currentYear = '';
+let currentYear = "";
 
 export default function Card({ href, frontmatter, secHeading = true }: Props) {
   const { title, pubDatetime, description } = frontmatter;
@@ -15,34 +15,43 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
   return (
     <>
       <>
-        {format(new Date(pubDatetime), 'yyyy') === currentYear ? (
-          ''
+        {format(new Date(pubDatetime), "yyyy") === currentYear ? (
+          ""
         ) : (
-          <h2 className='!text-accent !text-2xl'>{(currentYear = format(new Date(pubDatetime), 'yyyy'))}</h2>
+          <h2 className="!text-2xl !text-accent">
+            {(currentYear = format(new Date(pubDatetime), "yyyy"))}
+          </h2>
         )}
       </>
 
-      <div className='my-5 not-prose'>
-        <a href={href} className='flex flex-row !no-underline hover:text-accent'>
+      <div className="not-prose my-5">
+        <a
+          href={href}
+          className="flex flex-row !no-underline hover:text-accent"
+        >
           {/* <div> */}
           {secHeading ? (
-            <h2 className='whitespace-nowrap my-0 text-lg text-heading hover:text-accent font-body leading-[140%]'>
-              <span className='whitespace-normal mr-1.5'>{title}</span>
+            <h2 className="my-0 whitespace-nowrap font-body text-lg leading-[140%] text-heading hover:text-accent">
+              <span className="mr-1.5 whitespace-normal">{title}</span>
               &nbsp;
               {/* <Datetime datetime={pubDatetime} /> */}
-              {/* <Date date={pubDatetime} dateFormat='LL LLL' /> */}
-              <span className={`text-subtle font-code text-sm inline-block font-normal`}>
-                {format(new Date(pubDatetime), 'LL LLL')}
+              {/* <Date date={pubDatetime} dateFormat='dd LLL' /> */}
+              <span
+                className={`inline-block font-code text-sm font-normal text-subtle`}
+              >
+                {format(new Date(pubDatetime), "dd LLL")}
               </span>
             </h2>
           ) : (
-            <h3 className='whitespace-nowrap my-0 text-base text-heading hover:text-accent font-body leading-[140%]'>
-              <span className='whitespace-normal mr-1.5'>{title}</span>
+            <h3 className="my-0 whitespace-nowrap font-body text-base leading-[140%] text-heading hover:text-accent">
+              <span className="mr-1.5 whitespace-normal">{title}</span>
               &nbsp;
               {/* <Datetime datetime={pubDatetime} /> */}
-              {/* <Date date={pubDatetime} dateFormat='LL LLL' /> */}
-              <span className={`text-subtle font-code text-sm inline-block font-normal`}>
-                {format(new Date(pubDatetime), 'LL LLL')}
+              {/* <Date date={pubDatetime} dateFormat='dd LLL' /> */}
+              <span
+                className={`inline-block font-code text-sm font-normal text-subtle`}
+              >
+                {format(new Date(pubDatetime), "dd LLL")}
               </span>
             </h3>
           )}

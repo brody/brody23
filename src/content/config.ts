@@ -1,6 +1,8 @@
-import { defineCollection } from 'astro:content';
-import { journalSchema } from './_schemas';
-import { gardenSchema } from './_schemas';
+import { defineCollection } from "astro:content";
+import { journalSchema } from "./_schemas";
+import { workSchema } from "./_schemas";
+
+import { gardenSchema } from "./_schemas";
 
 const journal = defineCollection({
   schema: journalSchema,
@@ -8,5 +10,8 @@ const journal = defineCollection({
 const garden = defineCollection({
   schema: gardenSchema,
 });
+const work = defineCollection({
+  schema: workSchema,
+});
 
-export const collections = { journal, garden };
+export const collections = { journal, garden, work };
