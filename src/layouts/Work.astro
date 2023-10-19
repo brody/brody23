@@ -11,17 +11,17 @@ import type { CollectionEntry } from "astro:content";
 export interface Props {
   pageNum: number;
   totalPages: number;
-  entries: CollectionEntry<"work">[];
+  items: CollectionEntry<"work">[];
 }
 
-const { pageNum, totalPages, entries } = Astro.props;
+const { pageNum, totalPages, items } = Astro.props;
 ---
 
 <Layout title={`Work • ${SITE.title}`}>
   <Main title="Featured work" pageDesc="A selection of featured work.">
     {
-      entries.map(({ data }) => (
-        <WorkCard href={`/work/${slugify(data)}`} frontmatter={data} />
+      items.map(({ data }) => (
+        <WorkCard href={`/work/${data}`} frontmatter={data} />
       ))
     }
   </Main>

@@ -14,7 +14,7 @@ export interface Props {
 
 const { entry } = Astro.props;
 
-const { title, description, ogImage, pubDatetime, tags } = entry.data;
+const { title, description, ogImage, pubDatetime } = entry.data;
 
 const { Content } = await entry.render();
 

@@ -1,21 +1,21 @@
 ---
-import { CollectionEntry, getCollection } from 'astro:content';
-import Leaves from '@layouts/Leaves.astro';
-import LeafDetails from '@layouts/LeafDetails.astro';
-import getAlphaSortedPosts from '@utils/getAlphaSortedPosts';
-import getPageNumbers from '@utils/getPageNumbers';
-import slugify from '@utils/slugify';
-import { SITE } from '@config';
+import { type CollectionEntry, getCollection } from "astro:content";
+import Leaves from "@layouts/Leaves.astro";
+import LeafDetails from "@layouts/LeafDetails.astro";
+import getAlphaSortedPosts from "@utils/getAlphaSortedPosts";
+import getPageNumbers from "@utils/getPageNumbers";
+import slugify from "@utils/slugify";
+import { SITE } from "@config";
 
 export interface Props {
-  post: CollectionEntry<'garden'>;
+  post: CollectionEntry<"garden">;
 }
 
 export async function getStaticPaths() {
-  const leaf = await getCollection('garden', ({ data }) => !data.draft);
+  const leaf = await getCollection("garden", ({ data }) => !data.draft);
 
   const postResult = leaf.map((post) => ({
-    params: { slug: slugify(post.data) },
+    params: { slug: post.slug },
     props: { post },
   }));
 
@@ -29,13 +29,16 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 const { post } = Astro.props;
 
-const leaf = await getCollection('garden');
+const leaf = await getCollection("garden");
 
 const sortedPosts = getAlphaSortedPosts(leaf);
 
 const totalPages = getPageNumbers(sortedPosts.length);
 
-const currentPage = slug && !isNaN(Number(slug)) && totalPages.includes(Number(slug)) ? Number(slug) : 0;
+const currentPage =
+  slug && !isNaN(Number(slug)) && totalPages.includes(Number(slug))
+    ? Number(slug)
+    : 0;
 const lastPost = currentPage * SITE.postPerPage;
 const startPost = lastPost - SITE.postPerPage;
 
@@ -46,6 +49,10 @@ const paginatedPosts = sortedPosts.slice(startPost, lastPost);
   post ? (
     <LeafDetails leaf={post} />
   ) : (
-    <Leaves leaves={paginatedPosts} pageNum={currentPage} totalPages={totalPages.length} />
+    <Leaves
+      leaves={paginatedPosts}
+      pageNum={currentPage}
+      totalPages={totalPages.length}
+    />
   )
 }

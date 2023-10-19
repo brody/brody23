@@ -14,7 +14,7 @@ export interface Props {
 
 const { leaf } = Astro.props;
 
-const { title, author, description, ogImage, pubDatetime, tags } = leaf.data;
+const { title, description, ogImage, pubDatetime, tags } = leaf.data;
 
 const { Content } = await leaf.render();
 
@@ -22,7 +22,7 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
   .href;
 ---
 
-<Layout title={title} author={author} description={description} ogImage={ogUrl}>
+<Layout title={title} description={description} ogImage={ogUrl}>
   <div class="breadcrumbs not-prose mb-[3.25rem]">
     <a href="/">
       <span class="font-heading h-lig mr-1.5 -mt-0.5">:-)</span>Brody.com
