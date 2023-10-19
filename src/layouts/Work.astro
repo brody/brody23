@@ -21,7 +21,7 @@ const { pageNum, totalPages, items } = Astro.props;
   <Main title="Featured work" pageDesc="A selection of featured work.">
     {
       items.map(({ data }) => (
-        <WorkCard href={`/work/${data}`} frontmatter={data} />
+        <WorkCard href={`/work/${slugify(data)}`} frontmatter={data} />
       ))
     }
   </Main>

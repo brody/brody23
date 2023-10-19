@@ -24,7 +24,7 @@ const { pageNum, totalPages, leaves } = Astro.props;
   >
     {
       leaves.map(({ data }) => (
-        <GardenItem href={`/garden/${data}`} frontmatter={data} />
+        <GardenItem href={`/garden/${slugify(data)}`} frontmatter={data} />
       ))
     }
   </Main>
