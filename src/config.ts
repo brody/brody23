@@ -8,7 +8,7 @@ export const SITE: Site = {
   ogImage: "defaultOG.jpg",
   lightAndDarkMode: true,
   postPerPage: 999,
-  analytics: "UA-60603528-2",
+  analytics: "G-E23KXVPMG7",
 };
 
 export const LOGO_IMAGE = {
