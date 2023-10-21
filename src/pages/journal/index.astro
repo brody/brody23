@@ -1,12 +1,12 @@
 ---
-import { SITE } from '@config';
-import Entries from '@layouts/Entries.astro';
-import getSortedPosts from '@utils/getSortedPosts';
-import getPageNumbers from '@utils/getPageNumbers';
+import { SITE } from "@config";
+import Entries from "@layouts/Entries.astro";
+import getSortedPosts from "@utils/getSortedPosts";
+import getPageNumbers from "@utils/getPageNumbers";
 
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
-const entries = await getCollection('journal');
+const entries = await getCollection("journal");
 
 const sortedPosts = getSortedPosts(entries);
 
