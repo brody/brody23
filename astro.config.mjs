@@ -3,20 +3,27 @@ import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import { SITE } from "./src/config";
 import react from "@astrojs/react";
-
+import rehypeExternalLinks from "rehype-external-links";
 
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  integrations: [tailwind({
-    config: {
-      applyBaseStyles: false
-    }
-  }), mdx(), react()],
+  integrations: [
+    tailwind({
+      config: {
+        applyBaseStyles: false,
+      },
+    }),
+    mdx(),
+    react(),
+  ],
   vite: {
     optimizeDeps: {
-      exclude: ["@resvg/resvg-js"] 
-    }
+      exclude: ["@resvg/resvg-js"],
+    },
+  },
+  markdown: {
+    rehypePlugins: [[rehypeExternalLinks, { target: "_blank" }]],
   },
   // build: {
   //     rollupOptions: {
