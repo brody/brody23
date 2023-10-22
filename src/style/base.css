@@ -275,7 +275,11 @@
   }
 
   .wide {
-    @apply -ml-5 w-screen max-w-fit md:w-[calc(100vw-80px)] md:max-w-[720px];
+    @apply -ml-5 w-screen max-w-fit md:w-[calc(100vw-120px)] md:max-w-[720px];
+  }
+
+  .superwide {
+    @apply -ml-5 w-screen max-w-fit md:w-[calc(100vw-120px)] md:max-w-[1000px];
   }
 
   /* ===== scrollbar ===== */
