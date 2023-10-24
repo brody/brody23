@@ -18,7 +18,10 @@ const { pageNum, totalPages, entries } = Astro.props;
 ---
 
 <Layout title={`Journal • ${SITE.title}`}>
-  <Main title="Journal" pageDesc="All the articles I've posted.">
+  <Main
+    title="Journal"
+    pageDesc="The place where I share my thoughts about design, code, product & life."
+  >
     {
       entries.map(({ data }) => (
         <Card href={`/journal/${slugify(data)}`} frontmatter={data} />
