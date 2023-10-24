@@ -4,7 +4,9 @@ const now = Date.now();
 const getSortedPosts = (posts: CollectionEntry<"journal">[]) =>
   posts
     .filter(
-      ({ data }) => !data.draft && data.pubDatetime.getTime() <= Date.now(),
+      ({ data }) =>
+        !data.draft &&
+        Math.floor(data.pubDatetime.getTime() - 39600000) < Date.now(), // offset by -39600 seconds (11 hours) to account for timezone difference
     )
 
     .sort(
