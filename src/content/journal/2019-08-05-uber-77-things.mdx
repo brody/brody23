@@ -13,11 +13,12 @@ tags:
 
 import { Image } from "astro:assets";
 import uber77things from "/public/assets/journal/uber-design-77-things/cover.png";
-import Source from "@components/Source.astro";
+import LinkCard from "@components/LinkCard.astro";
 
 <Image src={uber77things} alt="Uber Design's 77 Things book" class="wide" />
 
-<Source
+<LinkCard
+  type="Source"
   url="https://medium.com/uber-design/77-things-about-uber-design-4621516e495c"
   title="77 Things About Uber Design"
   domain="medium.com"
@@ -189,7 +190,7 @@ You can go deep in one or more areas—like motion or visual, long-form or headl
 
 ### 40. Design thrives in constraints
 
-Technical and resource constraints are excellent catalysts for innovation. Know the constraints (your engineering and PM counterparts will be thrilled), and remember that it's impossible to think outside the box if you have no box to begin with.
+Technical and reLinkCard constraints are excellent catalysts for innovation. Know the constraints (your engineering and PM counterparts will be thrilled), and remember that it's impossible to think outside the box if you have no box to begin with.
 
 ### 41. Go for tangents
 
@@ -341,4 +342,4 @@ Pattern recognition is an essential skill for creators. See the patterns in user
 
 <br />
 
-Source: [77 Things About Uber Design](https://medium.com/uber-design/77-things-about-uber-design-4621516e495c)
+LinkCard: [77 Things About Uber Design](https://medium.com/uber-design/77-things-about-uber-design-4621516e495c)
