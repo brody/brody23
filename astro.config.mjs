@@ -4,13 +4,13 @@ import mdx from "@astrojs/mdx";
 import { SITE } from "./src/config";
 import react from "@astrojs/react";
 import rehypeExternalLinks from "rehype-external-links";
-import embeds from "astro-embed/integration";
+// import embeds from "astro-embed/integration";
 
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
   integrations: [
-    embeds(),
+    // embeds(),
     tailwind({
       config: {
         applyBaseStyles: false,
