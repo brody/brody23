@@ -5,7 +5,6 @@ import { Image } from "astro:assets";
 import brandLaunch from "/public/brand.jpg";
 import Main from "@layouts/Main.astro";
 import { SITE } from "@config";
-import { Tweet, YouTube } from "astro-embed";
 ---
 
 <Layout title={`About • ${SITE.title}`}>
@@ -142,15 +141,6 @@ import { Tweet, YouTube } from "astro-embed";
            Email
         </a>
       </div>
-    </section>
-    <section>
-      <YouTube
-        id="https://www.youtube.com/watch?v=Q0v2YJLq8n8"
-        class="md:wide"
-      />
-      <Tweet
-        id="https://twitter.com/astrodotbuild/status/1511750228428435457"
-      />
     </section>
   </Main>
 </Layout>
