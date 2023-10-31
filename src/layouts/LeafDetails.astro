@@ -1,59 +1,53 @@
 ---
-import Layout from "@layouts/Layout.astro";
-// import Header from '@components/Header.astro';
-// import Footer from '@components/Footer.astro';
-// import Tag from '@components/Tag.astro';
-// import Date from '@components/Date.astro';
-import { Icon } from "astro-icon";
-import type { CollectionEntry } from "astro:content";
-import { format, parseISO } from "date-fns";
+import Layout from '@layouts/Layout.astro'
+import { Icon } from 'astro-icon'
+import type { CollectionEntry } from 'astro:content'
+import { format, parseISO } from 'date-fns'
 
 export interface Props {
-  leaf: CollectionEntry<"garden">;
+	leaf: CollectionEntry<'garden'>
 }
 
-const { leaf } = Astro.props;
+const { leaf } = Astro.props
 
-const { title, description, ogImage, pubDatetime, tags } = leaf.data;
+const { title, description, ogImage, pubDatetime, tags } = leaf.data
 
-const { Content } = await leaf.render();
+const { Content } = await leaf.render()
 
-const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
-  .href;
+const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin).href
 ---
 
 <Layout title={title} description={description} ogImage={ogUrl}>
-  <div class="breadcrumbs not-prose mb-[3.25rem]">
-    <a href="/">
-      <span class="font-heading h-lig mr-1.5 -mt-0.5">:-)</span>Brody.com
-    </a>
-    <a href="/garden">
-      <span class=""><Icon pack="tabler" name="leaf" class="" /></span>Garden
-    </a>
-    <a></a>
-  </div>
-  <article>
-    <h1 class="post-title">{title}</h1>
+	<div class='breadcrumbs not-prose mb-[3.25rem]'>
+		<a href='/'>
+			<span class='font-heading h-lig mr-1.5 -mt-0.5'>:-)</span>Brody.com
+		</a>
+		<a href='/garden'>
+			<span class=''><Icon pack='tabler' name='leaf' class='' /></span>Garden
+		</a>
+		<a></a>
+	</div>
+	<article>
+		<h1 class='post-title'>{title}</h1>
 
-    <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
-      <Content />
-    </article>
+		<div id='article' role='article' class='prose mx-auto mt-8 max-w-3xl'>
+			<Content />
+		</div>
 
-    <!-- <ul class='tags-container'>
+		<!-- <ul class='tags-container'>
       {tags.map((tag) => <Tag name={tag} />)}
     </ul> -->
-  </article>
-  <!-- <Footer /> -->
+	</article>
 </Layout>
 
 <style>
-  main {
-    @apply mx-auto w-full max-w-3xl px-4 pb-12;
-  }
-  .post-title {
-    @apply text-2xl font-semibold text-accent;
-  }
-  .tags-container {
-    @apply my-8;
-  }
+	main {
+		@apply mx-auto w-full max-w-3xl px-4 pb-12;
+	}
+	.post-title {
+		@apply text-2xl font-semibold text-accent;
+	}
+	.tags-container {
+		@apply my-8;
+	}
 </style>

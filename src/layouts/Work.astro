@@ -1,49 +1,22 @@
 ---
-import { SITE } from "@config";
-import Layout from "@layouts/Layout.astro";
-import Main from "@layouts/Main.astro";
-// import Footer from '@components/Footer.astro';
-import WorkCard from "@components/WorkCard";
-// import LinkButton from '@components/LinkButton.astro';
-import slugify from "@utils/slugify";
-import type { CollectionEntry } from "astro:content";
+import { SITE } from '@config'
+import Layout from '@layouts/Layout.astro'
+import Main from '@layouts/Main.astro'
+import WorkCard from '@components/WorkCard'
+import slugify from '@utils/slugify'
+import type { CollectionEntry } from 'astro:content'
 
 export interface Props {
-  pageNum: number;
-  totalPages: number;
-  items: CollectionEntry<"work">[];
+	pageNum: number
+	totalPages: number
+	items: CollectionEntry<'work'>[]
 }
 
-const { pageNum, totalPages, items } = Astro.props;
+const { pageNum, totalPages, items } = Astro.props
 ---
 
 <Layout title={`Work • ${SITE.title}`}>
-  <Main title="Featured work" pageDesc="A selection of featured work.">
-    {
-      items.map(({ data }) => (
-        <WorkCard href={`/work/${slugify(data)}`} frontmatter={data} />
-      ))
-    }
-  </Main>
+	<Main title='Featured work' pageDesc='A selection of featured work.'>
+		{items.map(({ data }) => <WorkCard href={`/work/${slugify(data)}`} frontmatter={data} />)}
+	</Main>
 </Layout>
-
-<!-- (
-    <>
-      <>
-        {post.frontmatter.pubDate.slice(0, -20) === currentYear ? (
-          ''
-        ) : (
-          <span class='year pt-8 pb-4 px-4 text-lg font-semibold text-neutral-100'>
-            {(currentYear = post.frontmatter.pubDate.slice(0, -20))}
-          </span>
-        )}
-      </>
-      <BlogListItem
-        title={post.frontmatter.title}
-        pubDate={post.frontmatter.pubDate}
-        url={'/' + post.frontmatter.slug + '/'}
-      />
-    </>
-  ) -->
-
-<style></style>

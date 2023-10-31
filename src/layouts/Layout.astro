@@ -1,147 +1,126 @@
 ---
-import { SITE } from "@config";
-import "../style/base.css";
-import Draw from "@components/Draw.astro";
+import { SITE } from '@config'
+import '../style/base.css'
+import Draw from '@components/Draw.astro'
 
 export interface Props {
-  title?: string;
-  author?: string;
-  description?: string;
-  ogImage?: string;
+	title?: string
+	author?: string
+	description?: string
+	ogImage?: string
 }
 
 const {
-  title = SITE.title,
-  author = SITE.author,
-  description = SITE.desc,
-  ogImage = SITE.ogImage,
-} = Astro.props;
+	title = SITE.title,
+	author = SITE.author,
+	description = SITE.desc,
+	ogImage = SITE.ogImage,
+} = Astro.props
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
-const socialImageURL = new URL(
-  ogImage ? ogImage : SITE.ogImage,
-  Astro.url.origin,
-).href;
+const socialImageURL = new URL(ogImage ? ogImage : SITE.ogImage, Astro.url.origin).href
 
-const pathname = new URL(Astro.request.url).pathname;
-const analytics = SITE.analytics;
-const gaUrl = `https://www.googletagmanager.com/gtag/js?id=${analytics}`;
+const pathname = new URL(Astro.request.url).pathname
+const analytics = SITE.analytics
+const gaUrl = `https://www.googletagmanager.com/gtag/js?id=${analytics}`
 ---
 
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="manifest" href="/manifest.webmanifest" />
-    <link rel="canonical" href={canonicalURL} />
-    <meta name="generator" content={Astro.generator} />
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta name='viewport' content='width=device-width' />
+		<link rel='icon' href='/favicon.ico' sizes='any' />
+		<link rel='icon' href='/favicon.svg' type='image/svg+xml' />
+		<link rel='manifest' href='/manifest.webmanifest' />
+		<link rel='canonical' href={canonicalURL} />
+		<meta name='generator' content={Astro.generator} />
 
-    <!-- General Meta Tags -->
-    <title>{title}</title>
-    <meta name="title" content={title} />
-    <meta name="description" content={description} />
-    <meta name="author" content={author} />
+		<!-- General Meta Tags -->
+		<title>{title}</title>
+		<meta name='title' content={title} />
+		<meta name='description' content={description} />
+		<meta name='author' content={author} />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonicalURL} />
-    <meta property="og:image" content={socialImageURL} />
+		<!-- Open Graph / Facebook -->
+		<meta property='og:title' content={title} />
+		<meta property='og:description' content={description} />
+		<meta property='og:url' content={canonicalURL} />
+		<meta property='og:image' content={socialImageURL} />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={socialImageURL} />
+		<!-- Twitter -->
+		<meta property='twitter:card' content='summary_large_image' />
+		<meta property='twitter:url' content={canonicalURL} />
+		<meta property='twitter:title' content={title} />
+		<meta property='twitter:description' content={description} />
+		<meta property='twitter:image' content={socialImageURL} />
 
-    <!-- Safari -->
-    <meta
-      name="theme-color"
-      content="#040D21"
-      media="(prefers-color-scheme: light)"
-    />
-    <meta
-      name="theme-color"
-      content="#040D21"
-      media="(prefers-color-scheme: dark)"
-    />
+		<!-- Safari -->
+		<meta name='theme-color' content='#040D21' media='(prefers-color-scheme: light)' />
+		<meta name='theme-color' content='#040D21' media='(prefers-color-scheme: dark)' />
 
-    <!-- Analytics -->
-    <script async src={gaUrl}></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+		<!-- Analytics -->
+		<script async src={gaUrl}></script>
+		<script>
+			window.dataLayer = window.dataLayer || []
+			function gtag() {
+				dataLayer.push(arguments)
+			}
+			gtag('js', new Date())
 
-      gtag("config", "{gaUrl}");
-    </script>
+			gtag('config', '{gaUrl}')
+		</script>
 
-    <!-- Fonts -->
-    <link
-      rel="preload"
-      href="/assets/fonts/AcidGrotesk-Bold.otf"
-      as="font"
-      type="font/otf"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/MonoLisa-Regular.otf"
-      as="font"
-      type="font/otf"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/wotfard-regular-webfont.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/wotfard-regularitalic-webfont.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/wotfard-medium-webfont.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/assets/fonts/wotfard-semibold-webfont.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-  </head>
-  <body>
-    {pathname == "/" && <Draw />}
+		<!-- Fonts -->
+		<link
+			rel='preload'
+			href='/assets/fonts/AcidGrotesk-Bold.otf'
+			as='font'
+			type='font/otf'
+			crossorigin
+		/>
+		<link
+			rel='preload'
+			href='/assets/fonts/MonoLisa-Regular.otf'
+			as='font'
+			type='font/otf'
+			crossorigin
+		/>
+		<link
+			rel='preload'
+			href='/assets/fonts/wotfard-regular-webfont.woff2'
+			as='font'
+			type='font/woff2'
+			crossorigin
+		/>
+		<link
+			rel='preload'
+			href='/assets/fonts/wotfard-regularitalic-webfont.woff2'
+			as='font'
+			type='font/woff2'
+			crossorigin
+		/>
+		<link
+			rel='preload'
+			href='/assets/fonts/wotfard-medium-webfont.woff2'
+			as='font'
+			type='font/woff2'
+			crossorigin
+		/>
+		<link
+			rel='preload'
+			href='/assets/fonts/wotfard-semibold-webfont.woff2'
+			as='font'
+			type='font/woff2'
+			crossorigin
+		/>
+	</head>
+	<body>
+		{pathname == '/' && <Draw />}
 
-    <main
-      class={pathname === "/"
-        ? "container prose homepage z-10"
-        : "container prose"}
-    >
-      <slot />
-    </main>
-  </body>
+		<main class={pathname === '/' ? 'container prose homepage z-10' : 'container prose'}>
+			<slot />
+		</main>
+	</body>
 </html>
-<!-- <style is:global>
-  :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-  }
-</style> -->

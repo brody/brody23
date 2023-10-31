@@ -1,14 +1,11 @@
 ---
-import { format, parseISO } from "date-fns";
+import { format, parseISO } from 'date-fns'
 export interface Props {
-  date: string;
-  dateFormat: string | undefined;
+	date: string
+	dateFormat: string | undefined
 }
-const { date, dateFormat } = Astro.props as Props;
-const formattedDate = format(parseISO(date), "dateFormat");
-// {
-//   format(new Date(pubDatetime), 'MMMM dd, yyyy');
-// }
+const { date, dateFormat } = Astro.props as Props
+const formattedDate = format(parseISO(date), 'dateFormat')
 ---
 
 {formattedDate}

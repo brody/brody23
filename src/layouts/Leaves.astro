@@ -1,52 +1,31 @@
 ---
-import { SITE } from "@config";
-import Layout from "@layouts/Layout.astro";
-import Main from "@layouts/Main.astro";
-// import Footer from '@components/Footer.astro';
-import GardenItem from "@components/GardenItem";
-// import LinkButton from '@components/LinkButton.astro';
-import slugify from "@utils/slugify";
-import type { CollectionEntry } from "astro:content";
+import { SITE } from '@config'
+import Layout from '@layouts/Layout.astro'
+import Main from '@layouts/Main.astro'
+import GardenItem from '@components/GardenItem'
+import slugify from '@utils/slugify'
+import type { CollectionEntry } from 'astro:content'
 
 export interface Props {
-  pageNum: number;
-  totalPages: number;
-  leaves: CollectionEntry<"garden">[];
+	pageNum: number
+	totalPages: number
+	leaves: CollectionEntry<'garden'>[]
 }
 
-const { pageNum, totalPages, leaves } = Astro.props;
+const { pageNum, totalPages, leaves } = Astro.props
 ---
 
 <Layout title={`Digital Garden • ${SITE.title}`}>
-  <Main
-    title="Digital Garden"
-    pageDesc="Welcome to my digital garden, a collection of evergreen resources and knowledge gathered over time."
-  >
-    {
-      leaves.map(({ data }) => (
-        <GardenItem href={`/garden/${slugify(data)}`} frontmatter={data} />
-      ))
-    }
-  </Main>
+	<Main
+		title='Digital Garden'
+		pageDesc='Welcome to my digital garden, a collection of evergreen resources and knowledge gathered over time.'
+	>
+		<div class='not-prose'>
+			{
+				leaves.map(({ data }) => (
+					<GardenItem href={`/garden/${slugify(data)}`} frontmatter={data} />
+				))
+			}
+		</div>
+	</Main>
 </Layout>
-
-<!-- (
-    <>
-      <>
-        {post.frontmatter.pubDate.slice(0, -20) === currentYear ? (
-          ''
-        ) : (
-          <span class='year pt-8 pb-4 px-4 text-lg font-semibold text-neutral-100'>
-            {(currentYear = post.frontmatter.pubDate.slice(0, -20))}
-          </span>
-        )}
-      </>
-      <BlogListItem
-        title={post.frontmatter.title}
-        pubDate={post.frontmatter.pubDate}
-        url={'/' + post.frontmatter.slug + '/'}
-      />
-    </>
-  ) -->
-
-<style></style>
