@@ -5,7 +5,6 @@ import mdx from "@astrojs/mdx";
 import { SITE } from "./src/config";
 import react from "@astrojs/react";
 import rehypeExternalLinks from "rehype-external-links";
-import embed from "astro-embed/integration";
 
 // https://astro.build/config
 export default defineConfig({
@@ -21,7 +20,6 @@ export default defineConfig({
     },
   },
   integrations: [
-    embed(),
     mdx(),
     tailwind({
       config: {

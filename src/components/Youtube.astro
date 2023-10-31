@@ -1,0 +1,15 @@
+---
+const { id, className } = Astro.props;
+---
+
+<div class="my-5" class:list={className}>
+  <div class="aspect-h-9 aspect-w-16">
+    <iframe
+      width="560"
+      height="365"
+      src=`https://www.youtube.com/embed/${id}?rel=0`
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      loading="lazy"></iframe>
+  </div>
+</div>
