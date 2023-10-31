@@ -1,5 +1,5 @@
 import { defineConfig } from "astro/config";
-import netlify from "@astrojs/netlify/functions";
+// import netlify from "@astrojs/netlify/functions";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import { SITE } from "./src/config";
@@ -10,8 +10,8 @@ import embed from "astro-embed/integration";
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  output: "server",
-  adapter: netlify(),
+  // output: "server",
+  // adapter: netlify(),
   markdown: {
     rehypePlugins: [[rehypeExternalLinks, { target: "_blank" }]],
   },
