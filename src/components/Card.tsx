@@ -1,6 +1,6 @@
 // import Date from './Date.astro';
 import type { BlogFrontmatter } from "@content/_schemas";
-import { format, parseISO } from "date-fns";
+import { format } from "date-fns";
 
 export interface Props {
   href?: string;
