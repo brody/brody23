@@ -24,7 +24,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
 				)}
 			</>
 
-			<div className='not-prose my-5'>
+			<div className=' my-5'>
 				<a href={href} className='flex flex-row !no-underline hover:text-accent'>
 					<h3 className='my-0 whitespace-nowrap font-body text-lg leading-[140%] text-heading hover:text-accent'>
 						<span className='mr-1.5 whitespace-normal'>{title}</span>

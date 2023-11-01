@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import './fonts.css'; */
-
 @layer base {
 	@font-face {
 		font-family: 'Wotfard';
