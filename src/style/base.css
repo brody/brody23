@@ -234,10 +234,25 @@
 	.prose {
 		@apply !leading-[1.7] !text-default prose-headings:!mb-3 prose-headings:!font-heading prose-headings:!leading-[140%] prose-headings:!text-heading prose-h1:!text-2xl prose-h2:!text-[1.375rem] prose-h3:!text-lg prose-p:!text-default prose-a:!font-normal prose-a:!text-accent prose-a:!underline prose-a:!decoration-0 prose-a:!underline-offset-2 prose-a:!outline-2 prose-a:!outline-offset-1 prose-a:!outline-default hover:prose-a:!text-accent-hover prose-blockquote:!border-l-accent prose-blockquote:border-opacity-50 prose-blockquote:!font-normal prose-blockquote:!not-italic prose-blockquote:!text-default prose-blockquote:opacity-90 prose-figcaption:!text-subtle prose-figcaption:opacity-80 prose-strong:!text-default prose-code:rounded prose-code:!bg-subtle prose-code:p-1.5 prose-code:!font-normal prose-code:!text-heading prose-code:before:!content-[''] prose-code:after:!content-[''] prose-pre:!bg-subtle prose-pre:!leading-relaxed prose-pre:!text-default prose-ol:!text-default prose-ul:overflow-x-clip prose-ul:!text-default prose-li:marker:!text-accent prose-table:text-default prose-th:border prose-th:border-default prose-th:pt-2 prose-th:last-of-type:pr-2 prose-td:border prose-td:border-default prose-td:last-of-type:pr-2 prose-img:mx-auto prose-img:!mt-8 prose-hr:!border-default prose-lead:!text-lg prose-lead:!text-default;
 	}
-
-	.prose section {
-		@apply px-0;
+	.prose input {
+		@apply my-0;
 	}
+
+	/* <input
+		id='default-checkbox'
+		type='checkbox'
+		value=''
+		class='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'
+		> <input
+		checked
+		id='checked-checkbox'
+		type='checkbox'
+		value=''
+		class='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'
+		> .prose
+		section {
+		@apply px-0;
+	} */
 
 	.prose figcaption p {
 		@apply mt-3;
