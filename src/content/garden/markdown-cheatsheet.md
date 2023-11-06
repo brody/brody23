@@ -9,7 +9,8 @@ draft: false
 description: To serve as an example page when styling markdown based pages.
 ---
 
-##### Table of Contents
+<details>
+<summary class="h4">Table of Contents</h4></summary>
 
 [Headers](#headers)  
 [Emphasis](#emphasis)  
@@ -24,6 +25,8 @@ description: To serve as an example page when styling markdown based pages.
 [Horizontal Rule](#horizontal-rule)  
 [Line Breaks](#line-breaks)  
 [YouTube Videos](#youtube-videos)
+
+</details>
 
 ## Headers
 
@@ -112,7 +115,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 1. First ordered list item
 2. Another item
 
-- Unordered sub-list.
+* Unordered sub-list.
 
 1. Actual numbers don't matter, just that it's a number
 1. Ordered sub-list
@@ -124,11 +127,11 @@ Strikethrough uses two tildes. ~~Scratch this.~~
    Note that this line is separate, but within the same paragraph.  
    (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
 
-- Unordered list can use asterisks
+* Unordered list can use asterisks
 
-- Or minuses
+* Or minuses
 
-- Or pluses
+* Or pluses
 
 ## Links
 
@@ -217,8 +220,8 @@ Inline `code` has `back-ticks around` it.
 Blocks of code are either fenced by lines with three back-ticks <code>```</code>, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.
 
 <pre lang='markdown'>
-  <code>```javascript var s = "JavaScript syntax highlighting"; alert(s); ``` ```python s = "Python syntax highlighting"
-    print s ``` ``` No language indicated, so no syntax highlighting. But let's throw in a &lt;b&gt;tag&lt;/b&gt;. ```</code>
+  <code>```javascript var s = "JavaScript syntax highlighting"; alert(s);``` ```python s = "Python syntax highlighting"
+    print s``` ``` No language indicated, so no syntax highlighting. But let's throw in a &lt;b&gt;tag&lt;/b&gt;. ```</code>
 </pre>
 
 ```javascript
