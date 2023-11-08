@@ -1,19 +1,19 @@
 ---
-const { url, title, domain, type } = Astro.props;
-import { Icon } from "astro-icon";
+const { url, title, domain, type, className } = Astro.props
+import { Icon } from 'astro-icon'
 ---
 
-<div class="px-5 py-4 mb-10 rounded-md bg-subtle not-prose">
-  <span class="block mb-1 font-mono text-xs text-subtle">{type}:</span>
-  <span class="block mb-2 leading-normal text-heading font-heading">
-    {title}
-  </span>
+<div class='px-5 py-4 mb-10 rounded-md bg-subtle not-prose' class:list={className}>
+	<span class='block mb-1 font-mono text-xs text-subtle'>{type}:</span>
+	<span class='block mb-2 leading-normal text-heading font-heading'>
+		{title}
+	</span>
 
-  <a
-    href={url}
-    target="_blank"
-    rel="noopener noreferrer"
-    class="bg-accent
+	<a
+		href={url}
+		target='_blank'
+		rel='noopener noreferrer'
+		class='bg-accent
     inline-flex
     rounded-md
     px-2.5
@@ -21,15 +21,11 @@ import { Icon } from "astro-icon";
     font-medium
     text-sm
     hover:bg-accentHover
-    transition-colors"
-  >
-    <Icon
-      pack="tabler"
-      name="external-link"
-      class="inline-flex w-4 mr-1 text-border"
-    />
-    <span class="text-border">
-      {domain}
-    </span>
-  </a>
+    transition-colors'
+	>
+		<Icon pack='tabler' name='external-link' class='inline-flex w-4 mr-1 text-border' />
+		<span class='text-border'>
+			{domain}
+		</span>
+	</a>
 </div>
