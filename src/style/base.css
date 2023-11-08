@@ -209,7 +209,12 @@
 	}
 
 	mark {
-		@apply bg-accent bg-opacity-30 p-0.5 text-heading;
+		@apply bg-accentHover bg-opacity-20 p-0.5 text-heading;
+
+		border-radius: 3rem 2rem 3.2rem 1.1rem;
+		padding: 0.18rem 0.3rem;
+		margin: -0.18rem -0.3rem;
+		/* text-wrap: nowrap; */
 	}
 
 	iframe {
@@ -264,13 +269,6 @@
 
 	.prose figcaption p {
 		@apply mt-3;
-	}
-
-	mark {
-		border-radius: 4rem 2rem 4.2rem 1.1rem;
-		padding: 0.125rem 0.25rem;
-		margin: -0.125rem -0.25rem;
-		/* text-wrap: nowrap; */
 	}
 
 	.prose thead th:first-child,
