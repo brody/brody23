@@ -10,7 +10,7 @@ export interface Props {
 
 const { entry } = Astro.props
 
-const { title, description, ogImage, pubDatetime } = entry.data
+const { title, description, ogImage, pubDatetime, tags } = entry.data
 
 const { Content } = await entry.render()
 
@@ -29,6 +29,16 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin).href
 	</div>
 	<article>
 		<h1 class='post-title'>{title}</h1>
+
+		<div class='mt-4 flex flex-row flex-wrap gap-2'>
+			{
+				tags.map((tags) => (
+					<span class='rounded border border-default bg-subtle px-1.5 text-sm text-subtle'>
+						{tags}
+					</span>
+				))
+			}
+		</div>
 
 		<div id='article' role='article' class='prose mx-auto mt-8 max-w-3xl'>
 			<Content />
