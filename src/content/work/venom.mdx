@@ -8,13 +8,18 @@ tags:
   - Stakeholder Management
   - UX
   - UI
-  # ogImage: ""
 featuredImage: /assets/work/venom/featuredImage.png
+ogImage: /assets/work/venom/featuredImage.png
 
 description: Redesigned UI & UX, while creating JobAdder's design system, Venom.
 ---
 
+import { Image } from 'astro:assets'
+import featuredImage from '/public/assets/work/venom/featuredImage.png'
+
 JobAdder is a global recruitment platform built for staffing agency and in-house corporate recruiters. Used by over 10,000 people every day, we empower recruiters all over the world to recruit smarter and simpler.
+
+<Image src={featuredImage} alt='venom' class='wide' />
 
 ## Problem
 
@@ -35,7 +40,6 @@ After multiple UI design explorations, I started defining patterns, documenting,
 
 ## Base design elements
 
-import { Image } from 'astro:assets'
 import venom from '/public/assets/work/venom/venom.png'
 import redesign from '/public/assets/work/venom/redesign1.png'
 import redesign2 from '/public/assets/work/venom/redesign2.png'
