@@ -189,10 +189,10 @@
 		@apply px-5 py-6 md:px-20 md:py-24;
 	}
 
-	section,
+	/* section,
 	footer {
 		@apply mx-auto max-w-3xl px-4;
-	}
+	} */
 
 	a {
 		@apply text-accent underline decoration-1 underline-offset-2 outline-2 outline-offset-1 outline-default transition-all hover:text-accent-hover focus-visible:rounded focus-visible:no-underline focus-visible:outline-dashed;
