@@ -23,7 +23,7 @@ const socialImageURL = new URL(ogImage ? ogImage : SITE.ogImage, Astro.url.origi
 
 const pathname = new URL(Astro.request.url).pathname
 const analytics = SITE.analytics
-const gaUrl = `https://www.googletagmanager.com/gtag/js?id=${analytics}`
+// const gaUrl = `https://www.googletagmanager.com/gtag/js?id=${analytics}`
 ---
 
 <!doctype html>
@@ -66,8 +66,8 @@ const gaUrl = `https://www.googletagmanager.com/gtag/js?id=${analytics}`
 			src='https://cloud.umami.is/script.js'
 			data-website-id='90de7717-0d55-4444-af46-5f0e396836de'></script>
 
-		<script async src={gaUrl}></script>
-		<script>
+		<!-- <script async src={gaUrl}></script> -->
+		<!-- <script>
 			window.dataLayer = window.dataLayer || []
 			function gtag() {
 				dataLayer.push(arguments)
@@ -75,7 +75,7 @@ const gaUrl = `https://www.googletagmanager.com/gtag/js?id=${analytics}`
 			gtag('js', new Date())
 
 			gtag('config', '{analytics}')
-		</script>
+		</script> -->
 
 		<!-- Fonts -->
 		<link
